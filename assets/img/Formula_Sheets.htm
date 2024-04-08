@@ -1,0 +1,321 @@
+<!DOCTYPE html><html style="height: 100%;">
+
+<head>
+    <meta charset="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><title>CAS &#8211; Central Authentication Service</title>
+
+    
+<!--    <link class="removejsessionid" rel="stylesheet" href="../../static/css/cas.css?version=003"--><!--          th:href="@{${#themes.code('cas.standard.css.file')}}"/>--><!--    <link class="removejsessionid" rel="icon" th:href="@{/favicon.ico}" type="image/x-icon"/>--><!--    <script type="text/javascript" th:src="@{#{webjars.jquerymin.js}}"></script>--><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">--><script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script async src="https://cdn.byu.edu/byu-theme-components/2.x.x/byu-theme-components.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.byu.edu/byu-theme-components/2.x.x/byu-theme-components.min.css"/><link rel="stylesheet" href="/cas/css/cas.css"/><link rel="icon" href="/cas/favicon.ico"/><meta name="viewport" content="width=device-width, initial-scale=1.0"><link type="text/css" rel="stylesheet" href="https://cdn.byu.edu/theme-fonts/1.x.x/ringside/fonts.css" media="all"><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    </head>
+
+<html>
+<body>
+<div class="containing-element">
+    <byu-header>
+        <h1 slot="site-title">Login</h1>
+    </byu-header>
+
+    <img class="byu-bkgd-img" src="https://cas.byu.edu/cas/images/byu-bkgd-noblur2.jpg"><div class="page-content">
+        <main role="main" class="fullheightmiddle">
+            <div id="content" style="vertical-align: middle; height: 100%">
+        <div id="notices" style="vertical-align: middle; height: 100%">
+            <!--<div th:replace="fragments/insecure :: insecure"><a href="fragments/insecure.html">insecure alert goes here</a></div>--><div class="signin-wrapper">
+                <div class="byu-signin-box">
+                    <div class="signin-box-byu-logo">
+                        <img src="/cas/images/BYU-Logo.svg"></div>
+                    <p>By signing in, you agree to BYU Account <a id="termsOfUseURL" tabindex="11"
+                                                                  href="http://iam-policy.byu.edu">Terms of Use</a>.</p>
+                    <div id="list-providers2">
+
+            <!--            <h3 class="text-center mt-md-0 mt-4">--><!--                <i class="fas fa-user-shield"></i>--><!--                <span th:utext="#{screen.welcome.label.loginwith}">External Identity Providers</span>--><!--            </h3>--><div style="display:block">
+                <ul style="padding-left: 0px;">
+                    <li
+                            title="BYUH">
+                        <a style="text-decoration: none;"
+                           href="clientredirect?client_name=BYUH&amp;service=https%3A%2F%2Flearningsuite.byu.edu%2Fplugins%2FUpload%2FfileDownload.php%3FfileId%3Dadd7a1e0-i9NT-ZWbM-SsN7-mT88f81f861f"
+                           title="BYUH" autoRedirectType="none" class="mdc-button-saml2">
+
+                            <span class="mdi mdi-account-key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <!--                            BYUH--></a>
+                    </li>
+                    <li
+                            title="BYUI">
+                        <a style="text-decoration: none;"
+                           href="clientredirect?client_name=BYUI&amp;service=https%3A%2F%2Flearningsuite.byu.edu%2Fplugins%2FUpload%2FfileDownload.php%3FfileId%3Dadd7a1e0-i9NT-ZWbM-SsN7-mT88f81f861f"
+                           title="BYUI" autoRedirectType="none" class="mdc-button-saml2">
+
+                            <span class="mdi mdi-account-key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <!--                            BYUI--></a>
+                    </li>
+                    <li
+                            title="Church">
+                        <a style="text-decoration: none;"
+                           href="clientredirect?client_name=Church&amp;service=https%3A%2F%2Flearningsuite.byu.edu%2Fplugins%2FUpload%2FfileDownload.php%3FfileId%3Dadd7a1e0-i9NT-ZWbM-SsN7-mT88f81f861f"
+                           title="Church" autoRedirectType="none" class="mdc-button-saml2">
+
+                            <span class="mdi mdi-account-key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <!--                            Church--></a>
+                    </li>
+                    <li
+                            title="ENSIGN">
+                        <a style="text-decoration: none;"
+                           href="clientredirect?client_name=ENSIGN&amp;service=https%3A%2F%2Flearningsuite.byu.edu%2Fplugins%2FUpload%2FfileDownload.php%3FfileId%3Dadd7a1e0-i9NT-ZWbM-SsN7-mT88f81f861f"
+                           title="ENSIGN" autoRedirectType="none" class="mdc-button-saml2">
+
+                            <span class="mdi mdi-account-key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <!--                            ENSIGN--></a>
+                    </li>
+                    </ul>
+            </div>
+        </div>
+
+        <script>
+            const redirectTo = $("a[autoRedirectType=client]").attr("href");
+            if (redirectTo !== null && redirectTo !== undefined) {
+                window.location.href = redirectTo;
+            } else {
+                console.log("Unable to locate provider with auto-redirect");
+            }
+        </script>
+    <div class="signin-divider">
+                        <div class="divider-line"></div>
+                        <span>OR</span>
+                        <div class="divider-line"></div>
+                    </div>
+                    <div>
+                <!--<div class="card-header text-center">--><!--<h2 th:text="#{cas.login.pagetitle}">Login</h2>--><!--<span class="fa-stack fa-2x hidden-xs">--><!--<i class="fa fa-circle fa-stack-2x"></i>--><!--<i class="fa fa-lock fa-stack-1x fa-inverse"></i>--><!--</span>--><!--</div>--><div>
+
+                    <form method="post" id="fm1" action="login">
+
+                        <!--<h3>Testing</h3>--><!--<h3 th:utext="#{screen.welcome.instructions}">Enter your Username and Password</h3>--><section>
+                            <!--<label for="username" th:utext="#{screen.welcome.label.netid}">Username</label>--><div>
+                                <input id="username" tabindex="1" type="text" accesskey="u"
+                                       placeholder="Net ID" onkeyup="return forceLower(this);"
+                                       autocomplete="off" size="50" autofocus name="username" value=""/></div>
+                        </section>
+
+                        <section>
+                            <!--<label for="password" th:utext="#{screen.welcome.label.password}">Password</label>--><div>
+                                <input type="password" id="password" tabindex="2"
+                                       accesskey="p" placeholder="Password" autocomplete="off" size="50" name="password" value=""/><span id="capslock-on" style="display:none;">
+                                <p>
+                                    <i></i>
+                                    <span>CAPSLOCK key is turned on!</span>
+                                </p>
+                            </span>
+                            </div>
+                        </section>
+                        <div>
+                            <a id="accountRecoveryURL" tabindex="9" class="byu-forgot-link"
+                               href="https://accountrecovery.byu.edu">Need help logging in?</a>
+                        </div>
+
+
+                        <input type="hidden" name="execution" value="29e4fb26-0d2b-455f-bfe0-209d36f129e9_ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LlcyUXk5cy1IeGpuSHVubHA0d1VycXRRd1B6T2tRSllXdXlZV2t4V1hfSVBKeXdkWHc2SUVtMXotMHVSdnNQSHc5bWUxeDhiNHI0Z2xLM2ZEZ0VZSHZoN09mRFBITVpndVpHeWJfRWtjRjlSQUdlZDdEdDlvRTBCUEdpWWx6dkpWc085OVZiRTBBVXd0TlpCbjh1TERBZ2h3ZjNCT2EteW9lUk5iRW9qemRqVko2OXlNSDNMMXZtelRzLVUzWW5LcXZUUW80N0pLR3JaR1djRnduSTZybkFueldBa2VUZnNnRnVDYWRvTk9oMjNkQWFSZG5MUzB0aE9Zd2pXRGg2c3VFU1ZscEM4bXI1eUNGdzNiR01md1VrTF96ZWtiTzFzSi16RTNZRExmT3NaSHJnMy1OZzlPbktWbmdPZzc5SlJQMGc2UlpUb1dOWkFWb1V1bmt1MGdtMWRzZ0pDajhFTHcwVm1rTDNRSG1ycE1LSTlwRVZzajVPcnJ4UUVCWlpudmZhanc0Y1AzdHJ2U0wyZkxqa1ZiN2VmWDBnSTFoWDd2VUNyckpNczF3Z2lWMnF3VmFDT2puMmdOMUo3R2cxcy16bFI1QUdQd1hMdEd3TS1IX2hWNUZmMlIxU3VhWXhIWlBsZERmQUJvWWRObDBNQjltbV9YOE1NcWZsYnJVdFplOU1YUjNNTjlwNlVQbFhEdFVWWWdaSV90aE9HZFVPNkk2Y0FtRDdxb1QtNTlxRmdEOVozQ0EtVEx1T3NFd1NWb2ZYQ2hYOEFaTi1GQ01vaExqbmZKMWJRNjlJLUo3MGt0SU1jbjhGT1g0alpDd1BJa21faWpELTBHTWkxaUhtYmhKbjFxYkx6NDJHOWtQcG5CVUdYWTdIYjR1SHZjOFBVakU5REhEX2tQd0lYbllucE55X0FCc0xpcTRjc3pqUWFIQllkT1lHWXV4dkRmRV9naHBhQ3J4WUpYLU5PcjhVNkVuOTBNRi0ySVN3alplaVlKN1BCZkwtRHJ2U3p4bWpmRHpYcV81X2MxdE1LRVJFUDl3ODlOdUphbjJDS29jRVp4cjFkUmFCZDd3Z1I4alNZNkRQeFhlbWJMb1pOejVLcXVWM0JwRHN4TzdXQUtmSTZuUEVsMFBma0Y2M252SkpTdHY5MDZrZzBENUFXWVdBY1JZOThmXy15TWZXWnR3N0sxdDJMbFVDTGV1MlJaUXRmSUlPRmh2MUtJMGVhQW12b0RQNG9ZQUgwZHMzdmxJNmpEVWNabnA0ci1kU2taV1JSb3M2MExEdnhETVltbWZJMGRfTVdUMWI4QjNqcm92eFRadGxMVFV1dFFIYmNQN3NvVzBtUVNwNzJ3M05GZFh3MGhSQ2luT0llWmptamY4bkxRazhXb1FTbC1OYVZJRkxVS2pTcnNxdV9rRExEelloQXhkVVhJYXFjYUEyc0treTVBMGpGekpMdjEtcWtTVGtNY2dLVU5XVE1iTFMyMmNjdjN6b1pUNTNMdEZmb1Bja0xmRFpPZy1YWlN6TG9OUkxkQXQzeFZUbThsaTJrZmRjZGl3aGVFM1BSS05UVW5iN0RWb2dLT2ltcjZhV2loQlFfMHZ4R2Nma2Z3amlXX0JnM0RvaWtUTVVoazhfZFpkZFNwNklKcVVuS21CcXBBdXZuN3pXSmxaTkxBSy12d1o4S1JzMWY5Y1p4Q1JUM1dYM2lqTnBVY2ozWmNPRVQtMl81dEkyYlVzeUlNZzY4QkUxVVJ4U1Y0c3NlUkJ2NGZqMlMwNE5IbTJ2Wms0bWFVaExfLWVydUNXT3ctR2I0VTF2d2c4TUVDY1N0N25IZzdLVUhwd3Q0ODU4QWdnTlZENFdQNThBRzk4U2JwZDY0cEhpcW1kUEpRcEo5bkg2T2tpb1JDQmxEYS1BdWZkNEFFSE1QRkxwdFRPOTZPcVpOcEd5d2lqZG1MNF9lVUNHVGNXYXlfWjA0b3hqUXRqVUNiSnNGSWRJUUhJMmNwVzVtNWwwTUxKSmRMS243TllTS1c0ZzJJNGsyRkR6eUVXRjhrdHVFTHhBM0FUeXpSaU1uWFhFNFNDalZQMTR1WE5BMkdkMkhyQTNVeTNxdFBRQ3lEYkg3UEJpa041Q1doMDVXMlRRUXl5MXh0b1hzeERaMHFQamhzNzl3bGdaZm5oVFdzNU43N2F2dkxBSGs5Y283VWpPbVNnTUFqMEVQYURSTjdaWHdLVzQzS0JuaS1Oc05YMmozVTZ4N28yQm1kQm5nbVpyMzBrYzJUcDQ2M0UyZDRNRDJlWGF4RTM2WjduWGhLY1ZTMDFfZmRIUmVaOTlXN0hzTXdGQVNzdlgydkplQlo1R0ZxY2RkRGFjVGNqeGEteWlwS0tGTW5LdUFiMlIwSmlMaHZnS1NoNk9VV0NDeXZTNTVxLUJsRzlsQkRNbV96cnhvdmM1UlBUSnByYnlNMXYzcFFlZ0dnMFBDZjZWX3RVQkZ2NXlsWFplWEQ5MUlYbmQzUW11bDdDMkd3bEIxY2wtcHZPdHMxa01jVXlIamFnS1ZsLVlyamN1amluQXFQODZDV1A3Zi1KZTdzOThzOXVEaklJZldjdXJ3aWFEcllpMGlUY0djcGltYW0wTTdyVmt3QmhBOXJreWlkYUN4Q3gzQ0lkeEdrYUFEQnkzLUU5YjByS3ItT1F6OFFlZnNQUEFqMjJsRGh1dGIySHNVZEpkUEVQdUFSYTdISDRyN1lRVnBpNjMwbkdwZWRrb3NnVjROOG1YVHVaaVVJenQ0Yl8wVVNXa1N1QjBkWFJJYUh3alMxbnJUdWZhQU42bnVOeU1lTm82SXprS2tpMy1lTmpaWkVhTHY4RXZ4MTM4Mmhfcm5UM2NSUnUwd1JKWUhtRUVSeU9XYl9Vb0Z3OTV6QmIwMlVnNVdsXy1DcWtFMjRGYzR0UVJWejJyYVcyc1FLYkp1MEh2ZG5wUjVsaTh1U29ZbUJxS2N0R2NURTF4aTZWWXh6cUo2XzE1WG0tbU9YMGlDSDRrWmtlWGZGZDZ5cVp0SFlHYTN3eTBJNkJPdlJiWk8tRndUQ2lSTUl4eTI3TDZGV2ZPOVdMM2NjOVpSdTNNaXI3UkRjdUc4R0xoZVN1b0JIbnp2cXJtc2ZhT1dtWUlwTnFzWWlPY0I2N0wwV3RNejF1eVhhNF9FYVhHVnFLU1BMUWc2LWRrczVucTlTN21TSW5zM1FoV1Ryd0xVWHRsQXhDVm9UTWVZeEV3c0NZS2xFWXZ5SC1Qc0VBS3NNR0lRYzBIRmVEZEYtWWJwRFhsbVRrSjBTRnV4WTZ2UFFGcmd2TVRoUFhlbnFjbDNrOURXc3ZmekRnZE5CSWZxY19hdl9ldXJTbGdrMTFhRkloVjJUbHVhODBIbldxMVl2cWZ3MFJ0NlQwV2pjdW9LTjNpZndBekZCVXpsamhKbi1YRkdhZ3o3RzVCWFVpdE9FX3JYVExQRmEyTXB2cHdtOUlQQVRLbU9IZnA1bkhqcGRrbEF2Vzk3bXQ1RmIyZTcwQnF5SXBnU2txbTdKUnBSQ2syLWxfRHdpSk1SeW5fazBnYWFnLXJUczdXYXByRTNLMnA4X0NqcDNYMkZtSDhzNnl1cFBmdm5Tdl9QMklNNVJ4RGZzaEtCcWEtWTA0cm02UFZESVJHUjRFUUZDekkxRlNVVm42ZFc0bFJrem9zVjRuWXJVRzJPd1o4RUlXR29uX0wwaURnTHFhVkREc2N6ZllRQWg0NU9WTjJ0U0FDcVowZXFKU1lQMUVUZEZBYkdVd0ZKSkZORXFhcVl1cldfNjA2c3dPcExTMkRkTzJVOVdWLVR0V1h0RFctMEY0SjVWdzNqZXdiME9CYlkyOGkxOUFTRkpwMkExT1cxSU9jZ2JyZFlKOG1yZnV1QmVUbmpMbHlGWDBjNTlwaU9Td2dIemhTb2Y5alRwUjZyMDVUUjdvcGI4eU5Od1czLW9Ud0wzVF9tb2NHWmlUQURMbG9saEFEdm5DUmttcTNGd2NDZnkyUWttblNGRG5yZUJCdTBvWUhPUWtGVUhMU3dyV0MwZFV2c1I1LWtKSFJqZV9QTUtVcWhxaXVac1RUelJHOUZlRnNaVzhBdFR2bEo3N2JFSHZMZFZfRjJLRHlQVW1odWphNmJlSG53TUhWNDdkMHJiTGtuaXdrSjVVM2Ewd2ZMYWpIc1BPdFhIVDZrT1VzT082ZnZwQmZ6UzByRm55MVVFZ3NYYnFZTjVmWlRSMHVpRXJycUVBQ292WHVvckJLb01XNUFzRlB6UXQwd3BfbEFseVB0bjI4a19hVzA4WU9YZ3pqU0RUODMzMVQ2NEVES3A3UXROQXVuTGROYlROR1JpcXZqUm5zSnN1R1lydFl3T2Y5c2RkMUNhLTRXeFo5dkxDdlpUQnZTdkZCNXhlcFNyRGs5LWNoWXQ2MEcxc3hlQzF0Z3QxLXMwR0t5MGUxc3FhVEREcE5kRWlvVnBhYVpXTWVXZkVpblJWTnV5VkxoeFdCY19iTWZIeW5yMER1NjluZ1hBbjc5WFZJMTZydmJSM0dUa1YyRFFpYW5hN2l5dmpINVJabFVORVJCYXBXOVVTUlB3VVhOYXB2YThHRlh3SUZTa0RKYlNMRWQ3THZZZDI4WkM1clR6ZTJmWWNDXzNpSXpfUmt5a21wazRVV1p4MUxPVm41T21vLXMyaXdGTkppTkVEQnpHSGFVU1B6bl9XM3NvLWVHN1psQXVRb0oxbVlYR0NBeDJtTkhjRGpyWXk4Wm51dllUVmY1ekY5RVNybkVtekRlVTk2aTI0THY5UE1GU2gtTlgwaVZCcTM2bDdZWldkS2dzTGI2ZTI5UUdqclpUV3ZidktmZ2NwVnhlczdzeDRTRWd6MXFRUGdYVDEwMHB3cF9iMUtBNVBLcXlXdG9KcnpUUmctWWx4VFF3c3JZREppU2pvdVN4S29BVk5GeFA5MGZOb0dRN2ZZQWFLRDNESkpIVjR6MVdUb1JLX1Q1bjlVOWVUV1lIWGZNbEFNOWozYTJaOENRdWxrSGZBazk5NG1sWk9jQnI5enludURtcGFkSmZVNUhBOWF2ZWJkdkxOMHNsTDlDLWM4djA0V1VsQXlmX2FJY2RTWWZEYkJScklacUIwQXhMOEZQR0RZY3AyZGxkdkh4ajBqNFluRWx3ZG8wTzUyUnN0MjBWMWpsTnNaRHJWdlhHWDR2STJJSDZGYTFJdm5PUl90bVJyZHhvMmhHR3NfTEl2T1ZCYzN0ejZnVUItVXBPMmI5TXdHdHhmbldNRnZvbkhPTEdxelQ0c0xyeUd4RlZMckhpeDBmZmd0ODZ3aTRsa2toa0pveGhIcFdURTJqY3VqRVN4N2Z1V1dnSXlwOXEtd010Z25xbnFjeW9YeW83UWxnckwwRTRaRFh3RkZhSTZLN25HX1pNZlBXLTl2MkV3cjVBQlViNjhOMmZwMmlMU1VFNkxrZGlhN0l6OXBmaGlSODVhN0txUHpQZzdUVWhKZkNZLW00UFFPYzM1TFgwQ0t3em9FNGlpNUZfOFRLdzI2a0t4YlJXamNDNXVkLTZ0anlmcUhTZW1KMG50Wi1ZRlVkQ3g5a3prcG5BZVBpZXFTanBlNkpIM29tWjdGQkJ5UUZoSThjbXNVWlJTWjB1WXkwVFBpN3lqRWZCSHFJakM4Uk9qRFYwenZUV2kzZFdGOGZ1Z2JMcEhaZFhKTC1TY1diaFpvSFVMeU55RDl0SldrdzV3VlNqZHNqUWxqRV9sOEV6Q18yMWJfek9JZkVaQzB0N2VDSGNZWlhocDhQTmF4QUd5ZzdvWG9aelhweWcyX1BYTzRUb1pxWVN4azdLeXU3d2hGT0plN3d2dllyNDJVeXQ4cjFDT1g0WTFZMDFrMkxpQzhjQ25RY1lZcExuQVk0OFowNkVvaXBwMWNPSEFnX1Uyai1kX3hNNzY3aWN5RTdaSEZTWWEwWlo1YXdMLUVfY3lrRFJqMzVfOXM0Wi1RM29lSnNGUG1yOW9yT2RJSmF4eGkxLXNydnpzaDc3eGQ0enpneXNPcXA4XzhmWVB6NFpIb0xCa3BmSGpDdnIycFRBbk5sODRPYndXWThPQk5wX1NnV2NNU0Y5NE9lTHdobmFERzJaRjlyOWFEZF9VdE03ZzlHNXlUU3Y3cHNOZGxKTGlycDEtbTEybFdubDVXOXQtU3pwYmpvZ2VGR0c4bzBnU3ZtRGV2dFJtVVZBc0pZMVhUM0VmUGNiMlMtbUNLakZsVWpkNkhaVTA4aWp5bzhGenNOMHdBUlZnTVJxM2xMRjRGd0Vqd01pVERjNXJnMnVQamM0dWtjQjdMdXR4d2RzMGl3eUFjam83VGVmZGZ4X09sakxhYjUwbW9leXVZV2JaaE5oM1J2bHpuZFlFTTFQREFUUDlHWVkzUlBwOWRMVzNSRTVQb3NtaDBlbTR3cVh1STE5eWR4Z19lZVBpNWVHeGF4ZkNFUVh3NVFZbnYxZEFrQTlZc25BblFhUy5BWDlySVBadWltekZzajFBS3M4RWVJUHRhblJTYkpDTUdGQU5oRDQ4OUc4TDBIVDV6VGpZMU1WMEpJeWN1MUVlb3AtQ3NzU29tUUl1aG1hNjJvY3pDQQ=="/><input type="hidden" name="_eventId" value="submit"/><input type="hidden" name="geolocation"/><input id="byuSignInButton"
+                               name="submit" accesskey="l" type="submit" value="Sign In" tabindex="3"/></form>
+
+
+                    <!--<form th:if="${passwordManagementEnabled}" method="post" id="passwordManagementForm">--><!--<input type="hidden" name="execution" th:value="${flowExecutionKey}"/>--><!--<input type="hidden" name="_eventId" value="resetPassword"/>--><!--<span></span>--><!--<a th:utext="#{screen.pm.button.resetPassword}" href="javascript:void(0)"--><!--onclick="$('#passwordManagementForm').submit();"/>--><!--<p/>--><!--</form>--><!--<div th:unless="${passwordManagementEnabled}">--><!--&lt;!&ndash;<span class="fa fa-question-circle"></span>&ndash;&gt;--><!--<span th:utext="#{screen.pm.button.forgotpwd}">Forgot your password?</span>--><!--<p/>--><!--</div>--><!--                    /*<![CDATA[*/--><!--                    var i = /*One moment please...*/--><!--                    var j = /*Sign In*/--><!--                    /*]]>*/--><script type="text/javascript">
+                      $(window).on('pageshow', function () {
+                        $(':submit').prop('disabled', false)
+                        $(':submit').attr('value', 'Sign In')
+                      })
+                      $(document).ready(function () {
+                        $('#fm1').submit(function () {
+                          $(':submit').attr('disabled', true)
+                          $(':submit').attr('value', 'One moment please...')
+                          return true
+                        })
+                      })
+                    </script>
+
+
+                    <!--<div th:replace="fragments/loginsidebar :: loginsidebar"/>--></div>
+            </div>
+                    <div class="post-signin-options">
+                        <p><a id="createAccountURL" tabindex="10" href="https://accountcreation.byu.edu">Don't have an
+                            account?</a></p>
+                        <p>Protect your account with Duo Two-Step Verification.</p>
+                        <p>Learn more and sign up at <a id="duoURL" tabindex="12"
+                                                        href="https://duo.byu.edu">duo.byu.edu</a></p>
+                        <p class="addInMobile" style="display: none;"><a class="linkNoStyle" href="https://infosec.byu.edu/privacy-notice">Privacy Notice</a> | <a class="linkNoStyle" href="https://infosec.byu.edu/cookie-prefs">Cookie Preferences</a></p>
+                    </div>
+                </div>
+            </div>
+            <div id="cookiesDisabled" class="card" style="display: none;">
+    <div class="card-body">
+        <h5 class="card-title">Browser cookies disabled</h5>
+        <p class="card-text">Your browser does not accept cookies. Single Sign On WILL NOT WORK.</p>
+    </div>
+</div>
+        </div>
+    </div>
+        </main>
+    </div>
+    <byu-footer class="removeInMobileVersion"></byu-footer>
+</div>
+
+<script type="text/javascript" src="/cas/webjars/es5-shim/4.5.9/es5-shim.min.js"></script>
+<script type="text/javascript" src="/cas/webjars/css-vars-ponyfill/2.4.7/dist/css-vars-ponyfill.min.js"></script>
+<script type="text/javascript" src="/cas/webjars/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="/cas/webjars/material-components-web/13.0.0/dist/material-components-web.min.js"></script>
+<!--<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">--><script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<script type="text/javascript" src="/cas/js/cas.js"></script>
+<script>
+  if (typeof resourceLoadedSuccessfully === "function") {
+      resourceLoadedSuccessfully();
+  }
+  $(function() {
+      typeof cssVars === "function" && cssVars({onlyLegacy: true});
+  })
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-17149951-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || []
+
+  function gtag () {dataLayer.push(arguments)}
+
+  gtag('js', new Date())
+
+  gtag('config', 'UA-17149951-3')
+</script>
+
+
+<!--<script th:inline="javascript">--><!--    /*<![CDATA[*/--><!--    // var trackGeoLocation = /*false*/ === "true";--><!--    var trackGeoLocation = false;--><!--    var googleAnalyticsTrackingId = UA-17149951-3;--><!--    if (googleAnalyticsTrackingId != null && googleAnalyticsTrackingId != '') {--><!--        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){--><!--            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),--><!--            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)--><!--        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');--><!--        ga('create', googleAnalyticsTrackingId, 'auto');--><!--        ga('send', 'pageview');--><!--    }--><!--    /*]]>*/--><!--</script>--><script type="text/javascript">
+
+  function useThisLogin (str) {
+    window.location.href = '/cas/login?client_name=' + str
+  }
+
+  $(document).ready(function () {
+
+    // $('.errorMessages').each(function () {
+    //   if ($(this).text() == 'Service access denied due to missing privileges.') {
+    //     window.location.replace('https://blocked.accounts.byu.edu')
+    //   }
+    // })
+
+    $('h2').each(function () {
+      if ($(this).text() == 'Application Not Authorized to Use CAS') {
+        $('.fullheightmiddle').attr('style', 'background-color: #00235d; padding: 30px 40px;')
+      }
+    })
+
+    $('a[title=\'BYUH\']').html('' +
+      '<span style="color: white;"><div style="min-width: 180px;"/>Sign in with BYU–Hawaii</span></a>')
+    $('li[title=\'BYUH\']').attr('id', 'byuhSignIn')
+
+    $('a[title=\'BYUI\']').html('' +
+      '<span style="color: white;"><div style="min-width: 180px;"/>Sign in with BYU-Idaho</span></a>')
+    $('li[title=\'BYUI\']').attr('id', 'byuiSignIn')
+
+    $('a[title=\'AZURE\']').html('' +
+      '<span style="color: white;"><div style="min-width: 180px;"/>Sign in with Azure</span></a>')
+    $('li[title=\'AZURE\']').attr('id', 'azureSignIn')
+
+    $('a[title=\'OKTA\']').html('' +
+      '<span style="color: white;"><div style="min-width: 180px;"/>Sign in with Okta</span></a>')
+    $('li[title=\'OKTA\']').attr('id', 'oktaSignIn')
+
+    $('a[title=\'ENSIGN\']').html('' +
+      '<span style="color: white; white-space: nowrap;"><div style="min-width: 180px;"/>Sign in with Ensign College</span></a>')
+    $('li[title=\'ENSIGN\']').attr('id', 'ensignSignIn')
+
+    if(window.innerWidth<=400) {
+      $('.addInMobile').attr("style", "display: block;")
+    }
+
+    $('a[title=\'Church\']').attr('tabindex', '4').html('' +
+      '<span style="color: #444;"><img src="images/ChurchAccount_logo.png" alt="">Sign in with Church Account</span></a>')
+    $('li[title=\'Church\']').attr('id', 'churchSignIn')
+
+    $('li[title=\'BYUH\'], li[title=\'BYUI\'], li[title=\'ENSIGN\']').wrapAll('<div id=\'schoolAccordion\' style=\'cursor: pointer; \'><div></div></div>')
+    $('#schoolAccordion').attr('tabindex', '8').prepend('<h3><div></div>' +
+      'Sign in with another institution</h3>')
+    $('#schoolAccordion').accordion({collapsible: true, active: false})
+
+    $('#skipCovidTrainingTemporarily').click(function () {
+      $('#fm1').submit()
+    })
+
+    if ($('#skipCovidTrainingTemporarily').length) {
+      $('#interruptTitle').attr('style', 'display: none;')
+      $('#interruptExplanation').attr('style', 'display: none;')
+      $('#interruptExplanation2').attr('style', 'display: none;')
+    }
+
+    if ($('#identificationForUser').text() == 'error#1') {
+      if ($('#samlUsernameDisplay').val()) {
+        $('#identificationForUser').text("\"" + $('#samlUsernameDisplay').val() + "\"")
+      } else {
+        $('#identificationForUser').html('<img id="ldsLoading" width="20px" src="images/spinner.gif" alt=""/>')
+      }
+    }
+
+    if (window.location.href.indexOf('https://cas-stg.byu.edu') != -1) {
+      $('#content').prepend('<div width="100%" style="text-align: center;">' +
+        '<span title="For use of other application\'s Stage Environments. The data returned here is production data. Any major update to CAS will happen ' +
+        'here for a period of time (probably longer than a few days) before happening to prd. If there are problems please send a message to swlyons" ' +
+        'style="text-align: center; font-size: 80px; cursor: pointer;">STAGE Fargate Environment</span>' +
+        '</div>')
+    }
+    if (window.location.href.indexOf('https://cas-dev.byu.edu') != -1) {
+      $('#content').prepend('<div width="100%" style="text-align: center;">' +
+        '<span title="This is a CAS playground for updates and as such is not guarenteed to be available. It also uses Stage data." ' +
+        'style="text-align: center; font-size: 80px; cursor: pointer;">DEVELOPMENT Fargate Environment</span>' +
+        '</div>')
+    }
+
+    // $('#content').prepend('<div width="100%" style="text-align: center; background-color: red; padding: 16px; font-size: 24px;">' +
+    //     '<span title="For use of other application\'s Stage Environments. The data returned here is production data. Any major update to CAS will happen ' +
+    //     'here for a period of time (probably longer than a few days) before happening to prd. If there are problems please send a message to swlyons" ' +
+    //     'style="text-align: center; font-size: 16px; cursor: pointer;">Central Authentication Services (CAS) at BYU are currently experiencing technical difficulties. BYU engineers are working to resolve the outages as soon as possible. Logging into BYU applications and services may not be successful at this time.</span>' +
+    //     '</div>')
+
+    if (window.location.href.indexOf('service=') > -1) {
+      $('#createAccountURL').attr('href', 'https://accountcreation.byu.edu/new?returnURL=' + getUrlVars()['service'])
+    }
+
+    if (window.location.href.indexOf('https://cas-dev') == 0 || window.location.href.indexOf('https://cas-stg') == 0) {
+      if (window.location.href.indexOf('service=') > -1) {
+        $('#createAccountURL').attr('href', 'https://accountcreation-dev.byu.edu/new?returnURL=' + getUrlVars()['service'])
+      }
+      $('#accountRecoveryURL').attr('href', 'https://accountrecovery-dev.byu.edu')
+      $('#accountRecoveryURLNew').attr('href', 'https://accountrecovery.byu.edu/')
+      $('#myAccountUrl').attr('href', 'https://myaccount-dev.byu.edu/')
+      $('#newAccountUrl').attr('href', 'https://accountcreation-dev.byu.edu')
+    }
+
+      if ($('#hideLinkAccountError').length) {
+          $('#interruptTitle').attr('style', 'display: none;')
+          $('#interruptExplanation').attr('style', 'display: none;')
+      }
+
+  })
+
+  function getUrlVars () {
+    var vars = {}
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+      vars[key] = value
+    })
+    return vars
+  }
+
+  function forceLower (strInput) {
+    strInput.value = strInput.value.toLowerCase()
+  }
+
+  function goToCovid19TrainingPage () {
+    window.location.replace('https://cas.byu.edu/cas/login?service=https%3A%2F%2Fwelcome-back.byu.edu')
+  }
+
+</script>
+
+<!--<script src="https://apis.google.com/js/platform.js?onload=googleIsReady" async defer></script>--></body>
+</html>
+

@@ -1,0 +1,101 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: url(https://sjunkins.files.wordpress.com/2012/04/the-best-top-desktop-hd-dark-black-wallpapers-dark-black-wallpaper-dark-background-dark-wallpaper-23.jpg?w=1024);
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    font-style: bold;
+    margin-left: 10px;
+
+}
+
+h2 {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+h4 {
+    margin-left: 10px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.borders {
+    text-decoration-line: underline white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.footer {
+    background-color: lightgrey;
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
+.solid-block{
+    background-color: lightgrey;
+    color: white; 
+    padding: 3px;
+}
+.navbar {
+    background-color:lightgrey;
+    color: black;
+    text-align: left;
+    padding: 5px;
+    margin-top: 7px;
+}
+
+.navbar a:visited {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: white;
+    color: black;
+}
+.outline{
+    text-size-adjust: lg;
+    color: yellow;
+}
+
+a:visited {
+    color: yellow;
+}
+
+.bottom-float{
+    margin-bottom: 3px;
+}
